@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./index.html">Povratak na homepage</a>
+
+    <legend>Osobni podatci:</legend>
+    <form
+      action="#"
+      method="GET"
+      enctype="text/plain"
+      autocomplete="on"
+      oninput='umnozak.value=parseInt((faktor1.value)*parseInt(faktor2.value))+ "kn zarade"'
+    >
+      <fieldset>
+        <label for="ime">Ime:</label>
+        <input type="text" name="ime" id="ime" /><br /><br />
+
+        <!-- <input type="radio"> Displays a radio button (for selecting one of many choices) -->
+        <p>Odaberite spol</p>
+        <input type="radio" name="spol" id="spol_musko" value="M" />
+        <label for="spol">Muško</label><br />
+        <input type="radio" name="spol" id="spol_zensko" value="Z" />
+        <label for="spol">Žensko</label><br />
+        <input type="radio" name="spol" id="spol_Svemirac" value="S" />
+        <label for="spol">Svemirac</label>
+      </fieldset>
+      <!-- <input type="checkbox"> Displays a checkbox (for selecting zero or more of many choices) -->
+      <p>Koja vozila posjedujete?</p>
+      <input type="checkbox" id="vehicle1" name="vehicle" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle" value="Car" />
+      <label for="vehicle2"> I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle" value="Boat" />
+      <label for="vehicle3"> I have a boat</label><br /><br />
+
+      <!-- The <select> element defines a drop-down list 
+            The <optgroup> tag is used to group related options in a <select> element (drop-down list)-->
+      <label for="boja">Odaberite boju:</label>
+      <select id="boja" name="boja" multiple>
+        <optgroup label="Tople boje">
+          <option value="plava">Plava</option>
+          <option value="crna">Crna</option>
+        </optgroup>
+        <optgroup label="Hladne boje">
+          <option value="crvena">Crvena</option>
+          <option selected value="zelena">Zelena</option>
+        </optgroup></select
+      ><br /><br />
+
+      <!-- The <textarea> tag defines a multi-line text input control.
+            The <textarea> element is often used in a form, to collect user inputs like comments or reviews.
+            The size of a text area is specified by the cols and rows attributes (or with CSS).
+         <textarea name="message" rows="10" cols="60">
+            -->
+      <p>Unesite svoj članak:</p>
+      <textarea
+        name="message"
+        style="width: 300px; height: 150px; background-color: red"
+      >
+        Prostor za unos poruke</textarea
+      ><br /><br />
+
+      <!-- The <datalist> element specifies a list of pre-defined options for an <input> element. -->
+      <label for="grad">Odaberite grad u kojem trenutno živite:</label><br />
+      <input list="gradovi" name="grad" />
+      <datalist id="gradovi">
+        <option value="Šibenik">Šibenik</option>
+        <option value="Beli Manastir">Beli Manastir</option>
+        <option value="Rovinj">Rovinj</option>
+        <option value="Međimurje">Međimurje</option>
+      </datalist>
+      <br /><br />
+
+      <!-- The <output> element represents the result of a calculation (like one performed by a script). -->
+
+      <p style="color: rgb(61, 179, 114)">Isprobaj množenje:</p>
+      <input type="text" name="faktor1" id="faktor1" /> (radnih sati) *
+      <input type="text" name="faktor2" id="faktor2" /> (cijena sata) =
+      <output name="umnozak" for="faktor1 faktor2"></output>
+
+      <br /><br />
+      <!-- <input type="submit"> Displays a submit button (for submitting the form) -->
+      <input type="submit" value="Pošalji podatke" /><br /><br />
+    </form>
+  </body>
+</html>
