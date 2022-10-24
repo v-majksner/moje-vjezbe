@@ -9,7 +9,7 @@
   <body>
     <a href="./index.html">Povratak na homepage</a>
 
-    <legend>Osobni podatci:</legend>
+    
     <form
       action="#"
       method="GET"
@@ -18,8 +18,9 @@
       oninput='umnozak.value=parseInt((faktor1.value)*parseInt(faktor2.value))+ "kn zarade"'
     >
       <fieldset>
+        <legend>Osobni podatci:</legend>
         <label for="ime">Ime:</label>
-        <input type="text" name="ime" id="ime" /><br /><br />
+        <input type="text" name="ime" id="ime" required/><br /><br />
 
         <!-- <input type="radio"> Displays a radio button (for selecting one of many choices) -->
         <p>Odaberite spol</p>
